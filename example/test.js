@@ -1,17 +1,22 @@
-let { SmartAPI, WebSocketClient } = require("smartapi-javascript");
+let { SmartAPI, WebSocketClient } = require("../lib");
 
+
+// apiKey: 'y54SMNPy',
+// clientCode: 'A1209467',
+// password: 'Chotababu@1',
 let smart_api = new SmartAPI({
-    api_key: "smartapi_key",    // PROVIDE YOUR API KEY HERE
+    api_key: "y54SMNPy",    // PROVIDE YOUR API KEY HERE
     // OPTIONAL : If user has valid access token and refresh token then it can be directly passed to the constructor 
     // access_token: "YOUR_ACCESS_TOKEN",
     // refresh_token: "YOUR_REFRESH_TOKEN"
 });
 
 // If user does not have valid access token and refresh token then use generateSession method 
-smart_api.generateSession("CLIENT_CODE", "PASSWORD") 
-    .then((data) => {
+smart_api.generateSession("A1209467", "Chotababu@1") 
+    .then(async (data) => {
         console.log(data)
-        //        return smart_api.getProfile()
+               const ss =await smart_api.getProfile();
+               console.log(ss)
 
         // User Methods
         // return smart_api.logout()
