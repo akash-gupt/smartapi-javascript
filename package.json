@@ -3,7 +3,7 @@
   "version": "1.0.14",
   "description": "",
   "main": "./lib/",
-  "types": "types/index.d.ts",
+  "types": "types/lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
