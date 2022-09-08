@@ -34,6 +34,13 @@ export type SmartApiOptions = {
   session_expiry_hook?: string;
 }
 
+export type GetLtpOptions = {
+  exchange: string;
+  tradingsymbol: string;
+  symboltoken: string;
+};
+
+
 export class SmartAPI {
   constructor(options: ISmartApiOptions) { }
 
@@ -44,5 +51,6 @@ export class SmartAPI {
   ) => Promise<SmartAPIServerResponse<GenerateSessionResponseType>>;
 
   getProfile: () => Promise<SmartAPIServerResponse<GetProfileResponseType>>;
+  getLtp: () => Promise<SmartAPIServerResponse<GetLtpOptions>>;
 }
 
