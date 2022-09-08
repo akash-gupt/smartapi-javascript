@@ -40,6 +40,16 @@ export type GetLtpOptions = {
   symboltoken: string;
 };
 
+export type LTPType =  {
+  exchange: string;
+  tradingsymbol: string;
+  symboltoken: string;
+  open: number;
+  high: number;
+  low: number;
+  close: number;
+  ltp: number;
+}
 
 export class SmartAPI {
   constructor(options: ISmartApiOptions) { }
@@ -51,6 +61,6 @@ export class SmartAPI {
   ) => Promise<SmartAPIServerResponse<GenerateSessionResponseType>>;
 
   getProfile: () => Promise<SmartAPIServerResponse<GetProfileResponseType>>;
-  getLtp: () => Promise<SmartAPIServerResponse<GetLtpOptions>>;
+  getLtp: (options:GetLtpOptions) => Promise<SmartAPIServerResponse<LTPType>>;
 }
 
