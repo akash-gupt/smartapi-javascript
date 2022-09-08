@@ -1,4 +1,5 @@
 export interface SmartAPIServerResponse<T> {
+  success?:boolean;
   status: boolean;
   message: 'SUCCESS' | 'FAILED';
   data: T;

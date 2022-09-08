@@ -19,6 +19,7 @@ module.exports.API = {
     "get_rms": "/rest/secure/angelbroking/user/v1/getRMS",
     "get_holding": "/rest/secure/angelbroking/portfolio/v1/getHolding",
     "get_position": "/rest/secure/angelbroking/order/v1/getPosition",
+    "get_ltp":"/order-service/rest/secure/angelbroking/order/v1/getLtpData",
     "convert_position": "/rest/secure/angelbroking/order/v1/convertPosition",
 
     "create_rule": "/rest/secure/angelbroking/gtt/v1/createRule",
