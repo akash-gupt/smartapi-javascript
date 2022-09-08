@@ -61,6 +61,9 @@ export class SmartAPI {
   ) => Promise<SmartAPIServerResponse<GenerateSessionResponseType>>;
 
   getProfile: () => Promise<SmartAPIServerResponse<GetProfileResponseType>>;
-  getLtp: (options:GetLtpOptions) => Promise<SmartAPIServerResponse<LTPType>>;
+  /**
+   * Read more {https://apiconnect.angelbroking.com/order-service/rest/secure/angelbroking/order/v1/getLtpData}
+   */
+   getLTP: (options:GetLtpOptions) => Promise<SmartAPIServerResponse<LTPType>>;
 }
 
