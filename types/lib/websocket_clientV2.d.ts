@@ -2,7 +2,7 @@ export interface WebSocketClientV2Options {
   clientcode: string;
   jwttoken: string;
   apikey: string;
-  feedToken?: string;
+  feedtoken?: string;
 }
 
 type TokenListType = {
