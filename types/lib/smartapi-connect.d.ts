@@ -57,7 +57,8 @@ export class SmartAPI {
 
   generateSession: (
     clientCode: string,
-    password: string
+    password: string,
+    totp:string
   ) => Promise<SmartAPIServerResponse<GenerateSessionResponseType>>;
 
   getProfile: () => Promise<SmartAPIServerResponse<GetProfileResponseType>>;
